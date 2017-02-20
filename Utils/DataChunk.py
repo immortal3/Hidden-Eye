@@ -3,6 +3,7 @@
 def asciiTo2bit(dataString):
 	#dataString = 'bigger string lol lol'
 	ascii_array = []
+	#
 
 	#converting string into ascii char array
 	for x in string:
