@@ -6,7 +6,7 @@ def asciiTo2bit(dataString):
 	#
 
 	#converting string into ascii char array
-	for x in string:
+	for x in dataString:
 		ascii_array.append(ord(x))
 
 	#print (ascii_array)
