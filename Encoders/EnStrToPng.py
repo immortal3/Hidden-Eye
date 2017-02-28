@@ -15,6 +15,7 @@ def HideStringIntoPng(img,DataArray):
         DataHidenY.append(y)
         z = rd.randint(0,c - 1)
         DataHidenZ.append(z)
+        img[x][y][z] |= 0x03
         img[x][y][z] &= (0xfc | DataArray[i])
 
     return DataHidenX,DataHidenY,DataHidenZ,img
