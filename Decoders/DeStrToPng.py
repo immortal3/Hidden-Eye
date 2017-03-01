@@ -12,9 +12,10 @@ def UnHideStringIntoPng_2bit1pixel(img,X,Y,Z):
 		data.append(temp1 | temp2 | temp3 | temp4)
 
 	return data
+
 #Retrive Hidden string from png (-bit into 1 pixel)
 def UnHideStringIntoPng_8bit1pixel(img,X,Y):
-	data = []
+	data = ''
 	counter = 0
 
 	while counter < len(X):
@@ -23,6 +24,6 @@ def UnHideStringIntoPng_8bit1pixel(img,X,Y):
 		temp3 = (img[X[counter]][Y[counter ]][2]  & 0x03) << 2
 		temp4 = (img[X[counter]][Y[counter ]][3]  & 0x03)
 		counter += 1
-		data.append(temp1 | temp2 | temp3 | temp4)
+		data += chr(temp1 | temp2 | temp3 | temp4)
 
 	return data

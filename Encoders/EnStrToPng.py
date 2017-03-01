@@ -14,11 +14,11 @@ def HideStringIntoPng_2bit1pixel(img,DataArray,seed = 0):
     # hiding data into image
     for i in range(0,len(DataArray)):
         x = rd.randint(0,h -1)
-        while x in DataHidenX:
-            x = rd.randint(0,h -1)
         y = rd.randint(0,w - 1)
-        while y in DataHidenY:
-            y = rd.randint(0,w -1)
+        while (x,y) in DataHidenXY:
+            x = rd.randint(0,h -1)
+            y = rd.randint(0,w - 1)
+        DataHidenXY.append((x,y))
         DataHidenX.append(x)
         DataHidenY.append(y)
         z = rd.randint(0,c - 1)
@@ -35,6 +35,7 @@ def HideStringIntoPng_8bit1pixel(img,DataArray,seed = 0):
     # saving points where data is hidden
     DataHidenX = []
     DataHidenY = []
+    DataHidenXY = []
     if(seed != 0):
         rd.seed(seed)
     h , w, c = img.shape
@@ -45,11 +46,11 @@ def HideStringIntoPng_8bit1pixel(img,DataArray,seed = 0):
     i = 0
     while i < counter:
         x = rd.randint(0,h -1)
-        while x in DataHidenX:
-            x = rd.randint(0,h -1)
         y = rd.randint(0,w - 1)
-        while y in DataHidenY:
-            y = rd.randint(0,w -1)
+        while (x,y) in DataHidenXY:
+            x = rd.randint(0,h -1)
+            y = rd.randint(0,w - 1)
+        DataHidenXY.append((x,y))
         DataHidenX.append(x)
         DataHidenY.append(y)
         img[x][y][0] |= 0x03
