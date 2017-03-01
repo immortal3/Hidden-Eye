@@ -1,7 +1,9 @@
 import cv2
 import random as rd
-# Hide to string png
-def HideStringIntoPng(img,DataArray):
+
+
+# Hiding string into png (2-bit into 1 pixel)
+def HideStringIntoPng_2bit1pixel(img,DataArray):
     # saving points where data is hidden
     DataHidenX = []
     DataHidenY = []
@@ -19,3 +21,31 @@ def HideStringIntoPng(img,DataArray):
         img[x][y][z] &= (0xfc | DataArray[i])
 
     return DataHidenX,DataHidenY,DataHidenZ,img
+
+# Hiding string into png (8-bit into 1 pixel)
+def HideStringIntoPng_8bit1pixel(img,DataArray):
+    # saving points where data is hidden
+    DataHidenX = []
+    DataHidenY = []
+    h , w, c = img.shape
+    if c <= 3:
+        img = cv2.cvtColor(img,cv2.COLOR_BGR2BGRA)
+    # hiding data into image
+    counter = len(DataArray)
+    i = 0
+    while i < counter:
+        x = rd.randint(0,h -1)
+        y = rd.randint(0,w - 1)
+        DataHidenX.append(x)
+        DataHidenY.append(y)
+        img[x][y][0] |= 0x03
+        img[x][y][0] &= (0xfc | DataArray[i])
+        img[x][y][1] |= 0x03
+        img[x][y][1] &= (0xfc | DataArray[i + 1])
+        img[x][y][2] |= 0x03
+        img[x][y][2] &= (0xfc | DataArray[i + 2])
+        img[x][y][3] |= 0x03
+        img[x][y][3] &= (0xfc | DataArray[i + 3])
+        i += 4
+
+    return DataHidenX,DataHidenY,img

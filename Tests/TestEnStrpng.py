@@ -11,9 +11,15 @@ img = cv2.imread('Tests/White.png')
 dataString = 'my name is dip'
 #cv2.imshow('nothing',img)
 dataArray = DataChunk.asciiTo2bit(dataString)
-print (dataArray)
-DataHidenX,DataHidenY,DataHidenZ,img = EnStrToPng.HideStringIntoPng(img,dataArray)
+#print (dataArray)
+DataHidenX,DataHidenY,img = EnStrToPng.HideStringIntoPng_8bit1pixel(img,dataArray)
 cv2.imwrite('encoded.png',img)
-hiddendata = DeStrToPng.HideStringIntoPng(img,DataHidenX,DataHidenY,DataHidenZ)
+'''
+hiddendata = DeStrToPng.UnHideStringIntoPng_2bit1pixel(img,DataHidenX,DataHidenY,DataHidenZ)
+for x in hiddendata:
+	print (chr(x))
+'''
+
+hiddendata = DeStrToPng.UnHideStringIntoPng_8bit1pixel(img,DataHidenX,DataHidenY)
 for x in hiddendata:
 	print (chr(x))
