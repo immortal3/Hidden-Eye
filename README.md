@@ -9,23 +9,20 @@ One is for ASCII and other is for hidding pdf.
 
 ## Hiding ASCII 
 
-![Real_Red_Image](https://github.com/immortal3/Hidden-Eye/tree/master/Tests/Red.png)
+![Real_Red_Image](https://github.com/immortal3/Hidden-Eye/blob/master/Tests/Red.png)
 
-![Encode_Image](https://github.com/immortal3/Hidden-Eye/tree/master/ReadMe_Resources/Red_Encoded.png)
+![Encode_Image](https://github.com/immortal3/Hidden-Eye/blob/master/ReadMe_Resources/Red_Encoded.png)
 
 Second Image contains 25000 hidden chars in it.
 Can you see difference in it ??
 
 ## Hiding PDF
 
-![Real_pdf](https://github.com/immortal3/Hidden-Eye/tree/master/ReadMe_Resources/Real_pdf.pdf)
-Real PDF
-![Real_photo](https://github.com/immortal3/Hidden-Eye/tree/master/Tests/big_photo.png)
+
+![Real_photo](https://github.com/immortal3/Hidden-Eye/blob/master/Tests/big_photo.png)
 Real Photo
 
-![Encode_pdf](https://github.com/immortal3/Hidden-Eye/tree/master/ReadMe_Resources/decode.pdf)
-retrieved pdf from photo 
-![Encoded_pdf_image](https://github.com/immortal3/Hidden-Eye/tree/master/ReadMe_Resources/encoded_pdf.png)
+![Encoded_pdf_image](https://github.com/immortal3/Hidden-Eye/blob/master/ReadMe_Resources/encoded_pdf.png)
 hidden pdf into this photo
 
 
