@@ -9,6 +9,8 @@ One is for ASCII and other is for hidding pdf.
 
 ## Hiding ASCII 
 
+For checking , You can use TestEnStrpng.py
+
 ![Real_Red_Image](https://github.com/immortal3/Hidden-Eye/blob/master/Tests/Red.png)
 
 ![Encode_Image](https://github.com/immortal3/Hidden-Eye/blob/master/ReadMe_Resources/Red_Encoded.png)
@@ -18,12 +20,15 @@ Can you see difference in it ??
 
 ## Hiding PDF
 
+For checknig , You can use Hidingpdf.py
 
-![Real_photo](https://github.com/immortal3/Hidden-Eye/blob/master/Tests/big_photo.png)
 Real Photo
+![Real_photo](https://github.com/immortal3/Hidden-Eye/blob/master/Tests/big_photo.png)
 
-![Encoded_pdf_image](https://github.com/immortal3/Hidden-Eye/blob/master/ReadMe_Resources/encoded_pdf.png)
+
 hidden pdf into this photo
+![Encoded_pdf_image](https://github.com/immortal3/Hidden-Eye/blob/master/ReadMe_Resources/encoded_pdf.png)
+
 
 
 ### Issuses 
