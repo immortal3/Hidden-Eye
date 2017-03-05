@@ -17,7 +17,7 @@ print (img.shape)
 
 #encoded_img = Image.fromarray(img)
 #encoded_img.save('encoded.png','png')
-#cv2.imwrite('encoded.png',img)
+cv2.imwrite('encoded.png',img)
 #encoded_img = cv2.imread('encoded.png')
 unhidden_data = DePdfToPng.UnHidePdfintoPng(img,DataHidenX,DataHidenY)
 
