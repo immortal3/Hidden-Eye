@@ -10,6 +10,7 @@ def HideStringIntoPng_2bit1pixel(img,DataArray,seed = 0):
     DataHidenX = []
     DataHidenY = []
     DataHidenZ = []
+    DataHidenXY = []
     h , w, c = img.shape
     # hiding data into image
     for i in range(0,len(DataArray)):
